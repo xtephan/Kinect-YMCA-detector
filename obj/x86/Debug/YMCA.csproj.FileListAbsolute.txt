@@ -1,0 +1,33 @@
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\bin\Debug\YMCA.exe
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\bin\Debug\YMCA.pdb
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\MainWindow.baml
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\App.g.cs
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\YMCA_MarkupCompile.cache
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\YMCA.g.resources
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\YMCA.Properties.Resources.resources
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\YMCA.exe
+C:\Users\juji\AppData\Local\Temporary Projects\YMCA\obj\x86\Debug\YMCA.pdb
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\YMCA.exe
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\YMCA.pdb
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\bin\Debug\YMCA.exe
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\bin\Debug\YMCA.pdb
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\bin\Debug\Coding4Fun.Kinect.WinForm.dll
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\bin\Debug\Coding4Fun.Kinect.WinForm.pdb
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\bin\Debug\Coding4Fun.Kinect.Wpf.pdb
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\MainWindow.baml
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\App.g.cs
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\YMCA_MarkupCompile.cache
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\YMCA.g.resources
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\YMCA.Properties.Resources.resources
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\YMCA.csproj.ResolveComReference.cache
