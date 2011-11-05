@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+<<<<<<< HEAD
 using System.Media;
 
 using System.Reflection;
@@ -18,6 +19,9 @@ using System.IO;
 using System.Resources;
 using System.Media;
 using System.Diagnostics;
+=======
+
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
 
 //Kinect libraries
 using Microsoft.Research.Kinect.Nui;
@@ -31,6 +35,7 @@ namespace YMCA
     public partial class MainWindow : Window
     {
 
+<<<<<<< HEAD
         private struct JPoint
         {
             public float X;
@@ -56,6 +61,18 @@ namespace YMCA
             assembly = Assembly.GetExecutingAssembly();
             simpleSound = new SoundPlayer(assembly.GetManifestResourceStream("YMCA.ymca2.wav"));
             //simpleSound.Play();
+=======
+<<<<<<< HEAD
+        Runtime nui = Runtime.Kinects[0];
+=======
+        Runtime nui = new Runtime();
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+
+        int[] complete = {0,0,0,0,0}; //complete progress bar :-)
+        
+        public MainWindow()
+        {
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
             InitializeComponent();
 
         }
@@ -64,7 +81,16 @@ namespace YMCA
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
+<<<<<<< HEAD
             addDebug("Give me a Y!");
+=======
+            /*
+            //init kinect runtime for skeletal tracking
+            nui.Initialize(RuntimeOptions.UseSkeletalTracking);
+            //create an event
+            nui.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(nui_SkeletonFrameReady);
+            */
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
 
             // new version with camera
             nui.Initialize(RuntimeOptions.UseSkeletalTracking | RuntimeOptions.UseColor);
@@ -83,11 +109,19 @@ namespace YMCA
         //plays YMCA :-)
         void PlayMusic()
         {
+<<<<<<< HEAD
             if (!activeplayer)
             {
                 simpleSound.PlayLooping();
                 activeplayer = true;
             }
+=======
+<<<<<<< HEAD
+            //System.Diagnostics.Process.Start(@"C:\Users\juji\Documents\Visual Studio 2010\Projects\YMCA\YMCA\ymca-novegin.mp3");
+=======
+            System.Diagnostics.Process.Start(@"C:\Users\juji\Documents\Visual Studio 2010\Projects\YMCA\YMCA\ymca-novegin.mp3");
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
         }
 
 
@@ -124,6 +158,7 @@ namespace YMCA
             if (skeleton != null)
             {
 
+<<<<<<< HEAD
                 //head, sholderLeft, elbowLeft, handLeft, sholderRight, elbowRight, handRight
 
                 head = JointLocation(skeleton.Joints[JointID.Head]);
@@ -232,6 +267,68 @@ namespace YMCA
 
 
             debugg.Text = "------------Log Area--------------\nGive me an Y!";
+=======
+                //addDebug("Tracking Skeleton...");
+
+                //Canvas.
+                SetEllipsePosition(headEllipse, skeleton.Joints[JointID.Head]);
+
+                //left side
+                SetEllipsePosition(leftEllipse, skeleton.Joints[JointID.HandLeft]);
+                SetEllipsePosition(elbowleftEllipse, skeleton.Joints[JointID.ElbowLeft]);
+                SetEllipsePosition(sholderleftEllipse, skeleton.Joints[JointID.ShoulderLeft]);
+                
+                //right side
+                SetEllipsePosition(rightEllipse, skeleton.Joints[JointID.HandRight]);
+                SetEllipsePosition(elbowrightEllipse, skeleton.Joints[JointID.ElbowRight]);
+                SetEllipsePosition(sholderrightEllipse, skeleton.Joints[JointID.ShoulderRight]);
+
+                //detect Y
+                if ( complete[0]==0 && detectedY(skeleton) )
+                {
+                    addDebug("Detected Y!");
+                    complete[0] = 1;
+                }
+
+
+                //detect M
+                if (complete[1] == 0 && detectedM(skeleton))
+                {
+                    addDebug("Detected M!");
+                    complete[1] = 1;
+                }
+
+
+                //detect C
+                if (complete[2] == 0 && detectedC(skeleton))
+                {
+                    addDebug("Detected C!");
+                    complete[2] = 1;
+                }
+
+
+                //detect A
+                if (complete[3] == 0 && detectedA(skeleton))
+                {
+                    addDebug("Detected A!");
+                    complete[3] = 1;
+                }
+
+
+
+                //should i play?
+                if (shouldPlay())
+                {
+                    addDebug("Playing Music!!!!");
+                    PlayMusic();
+                    for (int i = 0; i <= 3; i++)
+                        complete[i] = 0;
+                }
+
+
+            }
+
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
         }
 
 
@@ -250,6 +347,7 @@ namespace YMCA
         }
 
 
+<<<<<<< HEAD
         #region defined positions
 
         //detect position for BRO
@@ -278,11 +376,79 @@ namespace YMCA
                         ae(elbowLeft.Y, elbowRight.Y);
 
 
+=======
+        //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        //detect position for A
+        private bool detectedA(SkeletonData skeleton)
+        {
+
+
+            // right hand positions
+            var handRightScaled = skeleton.Joints[JointID.HandRight].ScaleTo(1000, 1000, .9f, .9f);
+            float handRightScaledX = handRightScaled.Position.X;
+            float handRightScaledY = 1000 - handRightScaled.Position.Y;
+
+
+            // right elbow positions
+            var elbowRightScaled = skeleton.Joints[JointID.ElbowRight].ScaleTo(1000, 1000, .9f, .9f);
+            float elbowRightScaledX = elbowRightScaled.Position.X;
+            float elbowRightScaledY = 1000 - elbowRightScaled.Position.Y;
+
+            // right sholder positions
+            var sholderRightScaled = skeleton.Joints[JointID.ShoulderRight].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderRightScaledX = sholderRightScaled.Position.X;
+            float sholderRightScaledY = 1000 - sholderRightScaled.Position.Y;
+
+
+            // left hand positions
+            var handLeftScaled = skeleton.Joints[JointID.HandLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float handLeftScaledX = handLeftScaled.Position.X;
+            float handLeftScaledY = 1000 - handLeftScaled.Position.Y;
+
+
+            // left elbow positions
+            var elbowLeftScaled = skeleton.Joints[JointID.ElbowLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float elbowLeftScaledX = elbowLeftScaled.Position.X;
+            float elbowLeftScaledY = 1000 - elbowLeftScaled.Position.Y;
+
+            // left sholder positions
+            var sholderLeftScaled = skeleton.Joints[JointID.ShoulderLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderLeftScaledX = sholderLeftScaled.Position.X;
+            float sholderLeftScaledY = 1000 - sholderLeftScaled.Position.Y;
+
+
+            bool rightA = (sholderRightScaledY < elbowRightScaledY) &
+                          (elbowRightScaledY < handRightScaledY) &
+                          (sholderRightScaledX < elbowRightScaledX ) &
+                          (elbowRightScaledX >handRightScaledX  );
+
+
+
+            bool leftA = (sholderLeftScaledY < elbowLeftScaledY) &
+                         (elbowLeftScaledY < handLeftScaledY) &
+                         (sholderLeftScaledX > elbowLeftScaledX) &
+                         (elbowLeftScaledX < handLeftScaledX);
+
+            bool comA = (Math.Abs(handRightScaledY - handLeftScaledY) < 25) &
+                        (Math.Abs(elbowLeftScaledY - elbowRightScaledY) < 25);
+
+            /*
+            //Debug
+            //dx1.Text = "left Right X: " + handLeftScaledX.ToString();
+            dy1.Text = "right elbow X: " + elbowRightScaledX.ToString();
+
+
+            //dx2.Text = "sholder left X:" + sholderLeftScaledX.ToString();
+            dy2.Text = "right  hand x: " + handRightScaledX.ToString();
+            */
+
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
             return rightA & leftA & comA;
         }
 
 
 
+<<<<<<< HEAD
         //detect position for C
         private bool detectedC()
         {
@@ -294,11 +460,72 @@ namespace YMCA
             bool leftC = ae(handLeft.Y, elbowLeft.Y) &
                           (sholderLeft.X < elbowLeft.X);
 
+=======
+        //CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+        //detect position for C
+        private bool detectedC(SkeletonData skeleton)
+        {
+
+
+            // right hand positions
+            var handRightScaled = skeleton.Joints[JointID.HandRight].ScaleTo(1000, 1000, .9f, .9f);
+            float handRightScaledX = handRightScaled.Position.X;
+            float handRightScaledY = 1000 - handRightScaled.Position.Y;
+
+
+            // right elbow positions
+            var elbowRightScaled = skeleton.Joints[JointID.ElbowRight].ScaleTo(1000, 1000, .9f, .9f);
+            float elbowRightScaledX = elbowRightScaled.Position.X;
+            float elbowRightScaledY = 1000 - elbowRightScaled.Position.Y;
+
+            // right sholder positions
+            var sholderRightScaled = skeleton.Joints[JointID.ShoulderRight].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderRightScaledX = sholderRightScaled.Position.X;
+            float sholderRightScaledY = 1000 - sholderRightScaled.Position.Y;
+
+
+            // left hand positions
+            var handLeftScaled = skeleton.Joints[JointID.HandLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float handLeftScaledX = handLeftScaled.Position.X;
+            float handLeftScaledY = 1000 - handLeftScaled.Position.Y;
+
+
+            // left elbow positions
+            var elbowLeftScaled = skeleton.Joints[JointID.ElbowLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float elbowLeftScaledX = elbowLeftScaled.Position.X;
+            float elbowLeftScaledY = 1000 - elbowLeftScaled.Position.Y;
+
+            // left sholder positions
+            var sholderLeftScaled = skeleton.Joints[JointID.ShoulderLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderLeftScaledX = sholderLeftScaled.Position.X;
+            float sholderLeftScaledY = 1000 - sholderLeftScaled.Position.Y;
+
+
+            bool rightC = (Math.Abs(handRightScaledY - elbowRightScaledY) < 25) &
+                          ( sholderRightScaledX < handRightScaledX ) &
+                          (elbowRightScaledY < sholderRightScaledY);
+
+
+            
+            bool leftC = (Math.Abs(handLeftScaledY - elbowLeftScaledY) < 25) &
+                         (sholderLeftScaledX < elbowLeftScaledX);
+            
+            /*
+            //Debug
+            //dx1.Text = "left Right X: " + handLeftScaledX.ToString();
+            dy1.Text = "right elbow X: " + elbowRightScaledX.ToString();
+
+
+            //dx2.Text = "sholder left X:" + sholderLeftScaledX.ToString();
+            dy2.Text = "right  hand x: " + handRightScaledX.ToString();
+            */
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
 
             return rightC & leftC;
         }
 
 
+<<<<<<< HEAD
         //detect position for M
         private bool detectedM()
         {
@@ -310,11 +537,77 @@ namespace YMCA
             bool leftM = ae(sholderLeft.Y, elbowLeft.Y) &
                          ae(handLeft.X, elbowLeft.X) &
                            (elbowLeft.Y > handLeft.Y);
+=======
+
+
+
+
+        //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        //detect position for M
+        private bool detectedM(SkeletonData skeleton)
+        {
+
+
+            // right hand positions
+            var handRightScaled = skeleton.Joints[JointID.HandRight].ScaleTo(1000, 1000, .9f, .9f);
+            float handRightScaledX = handRightScaled.Position.X;
+            float handRightScaledY = 1000 - handRightScaled.Position.Y;
+
+
+            // right elbow positions
+            var elbowRightScaled = skeleton.Joints[JointID.ElbowRight].ScaleTo(1000, 1000, .9f, .9f);
+            float elbowRightScaledX = elbowRightScaled.Position.X;
+            float elbowRightScaledY = 1000 - elbowRightScaled.Position.Y;
+
+            // right sholder positions
+            var sholderRightScaled = skeleton.Joints[JointID.ShoulderRight].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderRightScaledX = sholderRightScaled.Position.X;
+            float sholderRightScaledY = 1000 - sholderRightScaled.Position.Y;
+
+
+            // left hand positions
+            var handLeftScaled = skeleton.Joints[JointID.HandLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float handLeftScaledX = handLeftScaled.Position.X;
+            float handLeftScaledY = 1000 - handLeftScaled.Position.Y;
+
+
+            // left elbow positions
+            var elbowLeftScaled = skeleton.Joints[JointID.ElbowLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float elbowLeftScaledX = elbowLeftScaled.Position.X;
+            float elbowLeftScaledY = 1000 - elbowLeftScaled.Position.Y;
+
+            // left sholder positions
+            var sholderLeftScaled = skeleton.Joints[JointID.ShoulderLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderLeftScaledX = sholderLeftScaled.Position.X;
+            float sholderLeftScaledY = 1000 - sholderLeftScaled.Position.Y;
+
+             
+            bool rightM = (Math.Abs(sholderRightScaledY - elbowRightScaledY) < 25) &
+                          (Math.Abs(handRightScaledX - elbowRightScaledX) < 25) &
+                          (elbowRightScaledY > handRightScaledY);
+
+
+
+            bool leftM = (Math.Abs(sholderLeftScaledY - elbowLeftScaledY) < 25) &
+                         (Math.Abs(handLeftScaledX - elbowLeftScaledX) < 25) &
+                         (elbowLeftScaledY > handLeftScaledY);
+
+            /*
+            //Debug
+            //dx1.Text = "left Right X: " + handLeftScaledX.ToString();
+            dy1.Text = "right elbow X: " + elbowRightScaledX.ToString();
+
+
+            //dx2.Text = "sholder left X:" + sholderLeftScaledX.ToString();
+            dy2.Text = "right  hand x: " + handRightScaledX.ToString();
+            */
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
             
             return rightM & leftM;
         }
 
 
+<<<<<<< HEAD
         //detect position for Y
         private bool detectedY()
         {
@@ -356,15 +649,89 @@ namespace YMCA
             Canvas.SetTop(ellipse, 860 - jp.Y);
         }
 
+=======
+
+
+        //YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+        //detect position for Y
+        private bool detectedY(SkeletonData skeleton)
+        {
+            
+            
+            // right elbow positions
+            /*
+            var elbowRightScaled = skeleton.Joints[JointID.ElbowRight].ScaleTo(1000, 1000, .9f, .9f);
+            float elbowRightScaledX = elbowRightScaled.Position.X;
+            float elbowRightScaledY = elbowRightScaled.Position.Y;
+            */
+
+            // right hand positions
+            var handRightScaled = skeleton.Joints[JointID.HandRight].ScaleTo(1000, 1000, .9f, .9f);
+            float handRightScaledX = handRightScaled.Position.X;
+            float handRightScaledY = 1000 - handRightScaled.Position.Y;
+
+            // right sholder positions
+            var sholderRightScaled = skeleton.Joints[JointID.ShoulderRight].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderRightScaledX = sholderRightScaled.Position.X;
+            float sholderRightScaledY = 1000 - sholderRightScaled.Position.Y;
+
+
+
+            // left hand positions
+            var handLeftScaled = skeleton.Joints[JointID.HandLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float handLeftScaledX = handLeftScaled.Position.X;
+            float handLeftScaledY = 1000 - handLeftScaled.Position.Y;
+
+            // left sholder positions
+            var sholderLeftScaled = skeleton.Joints[JointID.ShoulderLeft].ScaleTo(1000, 1000, .9f, .9f);
+            float sholderLeftScaledX = sholderLeftScaled.Position.X;
+            float sholderLeftScaledY = 1000 - sholderLeftScaled.Position.Y;
+
+            
+            bool rightHandUp = (sholderRightScaledX < handRightScaledX) & ( sholderRightScaledY < handRightScaledY );
+            bool leftHandUp  = (sholderLeftScaledX > handLeftScaledX)   & (sholderLeftScaledY < handLeftScaledY);
+              
+            /*
+            //debug messages
+            dx1.Text = "left Right X: " + handLeftScaledX.ToString();
+            dy1.Text = "left Right Y: " + handLeftScaledY.ToString();
+
+
+            dx2.Text = "sholder left X:" + sholderLeftScaledX.ToString();
+            dy2.Text = "sholder left y: " + sholderLeftScaledY.ToString();
+            */
+
+            
+            return rightHandUp & leftHandUp;
+        }
+
+        //move the elipse
+        private void SetEllipsePosition(FrameworkElement ellipse, Joint joint)
+        {
+            var scaledJoint = joint.ScaleTo(1000, 1000, .9f, .9f);
+
+            Canvas.SetLeft(ellipse, scaledJoint.Position.X);
+            Canvas.SetTop(ellipse, scaledJoint.Position.Y);
+        }
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
 
         private void Window_Closed(object sender, EventArgs e)
         {
             nui.Uninitialize();
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
 
         private void video_ImageFailed(object sender, ExceptionRoutedEventArgs e)
         {
 
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
     }
 }

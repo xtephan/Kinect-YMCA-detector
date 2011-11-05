@@ -46,7 +46,15 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
+<<<<<<< HEAD
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+=======
+<<<<<<< HEAD
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+=======
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,7 +68,14 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+<<<<<<< HEAD
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+=======
+<<<<<<< HEAD
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -69,10 +84,22 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
               <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
               <xsd:attribute ref="xml:space" />
+<<<<<<< HEAD
+=======
+=======
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -87,10 +114,22 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
               <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
               <xsd:attribute ref="xml:space" />
+<<<<<<< HEAD
+=======
+=======
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -112,9 +151,22 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
     <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+<<<<<<< HEAD
+=======
+=======
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
   </resheader>
 </root>

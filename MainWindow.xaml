@@ -1,6 +1,10 @@
 ﻿<Window x:Class="YMCA.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
         Title="YMCA detector" Height="700" Width="1200" Loaded="Window_Loaded" Closed="Window_Closed" WindowState="Normal" ResizeMode="NoResize" Icon="/YMCA;component/ymca-icon.jpg">
     <StackPanel Orientation="Horizontal">
         <!--      Left side                  -->
@@ -16,12 +20,19 @@
         
         <!--      Right side                  -->
         <StackPanel Orientation="Vertical">
+<<<<<<< HEAD
                  <TextBlock Text="X-Ray View" TextAlignment="Center" FontSize="20" />
                 <Canvas Name="MainCanvas" Height="642" Width="864" Background="Black">
                     
                 <Image Name="smileyHead"  Canvas.Left="318" Canvas.Top="0" Width="50" Source="Resources/bigsmiley.png" Height="112" />
 
                 <Ellipse Canvas.Left="537" Canvas.Top="256" Height="30" Name="rightEllipse" Stroke="Black" Width="30" Fill="#FF864DFF" />
+=======
+            <TextBlock Text="X-Ray View" TextAlignment="Center" FontSize="20" />
+                <Canvas Name="MainCanvas" Height="642" Width="864" Background="Black">
+                        <Ellipse Canvas.Left="395" Canvas.Top="12" Height="30" Name="headEllipse" Stroke="Black" Width="30" Fill="#FF70807B" />
+                        <Ellipse Canvas.Left="537" Canvas.Top="256" Height="30" Name="rightEllipse" Stroke="Black" Width="30" Fill="#FF864DFF" />
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
                         <Ellipse Canvas.Left="180" Canvas.Top="270" Fill="#FF864DFF" Height="30" Name="leftEllipse" Stroke="Black" Width="30" />
                         <Ellipse Canvas.Left="180" Canvas.Top="164" Fill="#FF00ACFF" Height="30" Name="elbowleftEllipse" Stroke="Black" Width="30" />
                         <Ellipse Canvas.Left="537" Canvas.Top="164" Fill="#FF00ACFF" Height="30" Name="elbowrightEllipse" Stroke="Black" Width="30" />
@@ -31,6 +42,29 @@
                 </Canvas>
 
         </StackPanel>
+<<<<<<< HEAD
+=======
+=======
+        Title="YMCA detector" Height="1000" Width="1300" Loaded="Window_Loaded" Closed="Window_Closed" Icon="/YMCA;component/YMCA-S_W_RGB_Twitter_normal.jpg" WindowState="Maximized">
+    <StackPanel Orientation="Horizontal">
+    <Image Width="500" Height="500" Name="video" Margin="10 0 10 10"/> 
+    <Canvas Name="MainCanvas">
+        <Ellipse Canvas.Left="180" Canvas.Top="272" Height="50" Name="headEllipse" Stroke="Black" Width="50" Fill="Orange" />
+        <Ellipse Canvas.Left="338" Canvas.Top="12" Height="50" Name="rightEllipse" Stroke="Black" Width="50" Fill="SlateGray" />
+        <Ellipse Canvas.Left="537" Canvas.Top="272" Fill="SpringGreen" Height="50" Name="leftEllipse" Stroke="Black" Width="50" />
+        <Ellipse Canvas.Left="180" Canvas.Top="164" Fill="#FFFF1500" Height="50" Name="elbowleftEllipse" Stroke="Black" Width="50" />
+        <Ellipse Canvas.Left="537" Canvas.Top="164" Fill="#FF145A00" Height="50" Name="elbowrightEllipse" Stroke="Black" Width="50" />
+        <Ellipse Canvas.Left="180" Canvas.Top="87" Fill="#FF291500" Height="50" Name="sholderleftEllipse" Stroke="Black" Width="50" />
+        <Ellipse Canvas.Left="537" Canvas.Top="87" Fill="#FF291500" Height="50" Name="sholderrightEllipse" Stroke="Black" Width="50" />
+        <TextBlock Canvas.Left="31" Canvas.Top="559" Name="debugg" Foreground="Black" Text="Debug messages" Height="390" Width="600" FontSize="30" FontWeight="Bold" />
+
+        <TextBlock Canvas.Left="446" Canvas.Top="449" Name="dx1" Foreground="White" Text="dx1" Height="56" Width="460" FontSize="30" FontWeight="Bold" />
+        <TextBlock Canvas.Left="446" Canvas.Top="511" Name="dy1" Foreground="White" Text="dy1" Height="67" Width="460" FontSize="30" FontWeight="Bold" />
+        <TextBlock Canvas.Left="446" Canvas.Top="575" Name="dx2" Foreground="White" Text="dx2" Height="56" Width="460" FontSize="30" FontWeight="Bold" />
+        <TextBlock Canvas.Left="446" Canvas.Top="637" Name="dy2" Foreground="White" Text="dy2" Height="67" Width="460" FontSize="30" FontWeight="Bold" />
+    </Canvas>
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
 
     </StackPanel>
 

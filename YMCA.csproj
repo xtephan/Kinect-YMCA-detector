@@ -15,6 +15,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+<<<<<<< HEAD
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\xtephan\Desktop\ymca-deploy\</PublishUrl>
     <Install>true</Install>
@@ -31,6 +32,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+=======
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -51,6 +54,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+<<<<<<< HEAD
   <PropertyGroup>
     <ManifestCertificateThumbprint>C1B5162254948C693910F175F43DEEFBAEAB582E</ManifestCertificateThumbprint>
   </PropertyGroup>
@@ -67,16 +71,34 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+=======
+  <ItemGroup>
+    <Reference Include="Coding4Fun.Kinect.WinForm">
+      <HintPath>.\Coding4Fun.Kinect.WinForm.dll</HintPath>
+    </Reference>
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
     <Reference Include="Coding4Fun.Kinect.Wpf">
       <HintPath>.\Coding4Fun.Kinect.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Drawing">
       <HintPath>.\Microsoft.Expression.Drawing.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
     <Reference Include="Microsoft.Research.Kinect, Version=1.0.0.45, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+<<<<<<< HEAD
+=======
+=======
+    <Reference Include="Microsoft.Research.Kinect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -125,14 +147,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+<<<<<<< HEAD
     <None Include="app.config" />
+=======
+<<<<<<< HEAD
+    <None Include="app.config" />
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+<<<<<<< HEAD
     <None Include="YMCA_1_TemporaryKey.pfx" />
     <None Include="YMCA_TemporaryKey.pfx" />
+=======
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WMPLib">
@@ -146,6 +178,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Resource Include="ymca-icon.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -187,6 +220,19 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+=======
+    <Resource Include="YMCA-S_W_RGB_Twitter_normal.jpg" />
+  </ItemGroup>
+<<<<<<< HEAD
+  <ItemGroup>
+    <Resource Include="ymca-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
+>>>>>>> 87b46ca045a9a292512297abf81edcc34775667c
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
