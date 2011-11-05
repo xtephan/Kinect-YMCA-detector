@@ -31,6 +31,7 @@ C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\Gene
 C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\Interop.WMPLib.dll
 C:\Users\juji\documents\visual studio 2010\Projects\YMCA\YMCA\obj\x86\Debug\YMCA.csproj.ResolveComReference.cache
+<<<<<<< HEAD
 C:\Users\xtephan\Desktop\ymca\obj\x86\Debug\Interop.WMPLib.dll
 C:\Users\xtephan\Desktop\ymca\obj\x86\Debug\YMCA.csproj.ResolveComReference.cache
 C:\Users\xtephan\Desktop\ymca\obj\x86\Debug\YMCA.exe
@@ -52,3 +53,5 @@ C:\Users\xtephan\Desktop\ymca\obj\x86\Debug\YMCA.Properties.Resources.resources
 C:\Users\xtephan\Desktop\ymca\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\xtephan\Desktop\ymca\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\xtephan\Desktop\ymca\bin\Debug\YMCA.exe.config
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750

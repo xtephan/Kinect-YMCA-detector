@@ -45,10 +45,16 @@
     <Reference Include="Microsoft.Expression.Drawing">
       <HintPath>.\Microsoft.Expression.Drawing.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="Microsoft.Research.Kinect, Version=1.0.0.45, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+=======
+    <Reference Include="Microsoft.Research.Kinect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -97,7 +103,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+<<<<<<< HEAD
     <None Include="app.config" />
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,12 +127,15 @@
   <ItemGroup>
     <Resource Include="YMCA-S_W_RGB_Twitter_normal.jpg" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <Resource Include="ymca-icon.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

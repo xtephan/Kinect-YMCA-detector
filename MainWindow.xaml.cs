@@ -25,7 +25,11 @@ namespace YMCA
     public partial class MainWindow : Window
     {
 
+<<<<<<< HEAD
         Runtime nui = Runtime.Kinects[0];
+=======
+        Runtime nui = new Runtime();
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
 
         int[] complete = {0,0,0,0,0}; //complete progress bar :-)
         
@@ -63,7 +67,11 @@ namespace YMCA
         //plays YMCA :-)
         void PlayMusic()
         {
+<<<<<<< HEAD
             //System.Diagnostics.Process.Start(@"C:\Users\juji\Documents\Visual Studio 2010\Projects\YMCA\YMCA\ymca-novegin.mp3");
+=======
+            System.Diagnostics.Process.Start(@"C:\Users\juji\Documents\Visual Studio 2010\Projects\YMCA\YMCA\ymca-novegin.mp3");
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
         }
 
 
@@ -447,10 +455,13 @@ namespace YMCA
         {
             nui.Uninitialize();
         }
+<<<<<<< HEAD
 
         private void video_ImageFailed(object sender, ExceptionRoutedEventArgs e)
         {
 
         }
+=======
+>>>>>>> 0bd3a0cfb1dce3d0dbddeb9d638735ba9d22b750
     }
 }
