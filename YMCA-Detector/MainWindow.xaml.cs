@@ -30,6 +30,11 @@ namespace YMCA_Detector
             kinectSensorChooser1.KinectSensorChanged += new DependencyPropertyChangedEventHandler(kinectSensorChooser1_KinectSensorChanged);
         }
 
+        /// <summary>
+        /// Choose a kinect API
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void kinectSensorChooser1_KinectSensorChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             KinectSensor oldSensor = (KinectSensor)e.OldValue;
@@ -41,6 +46,7 @@ namespace YMCA_Detector
                 return;
 
             newSensor.ColorStream.Enable();
+            newSensor.DepthStream.Enable();
             newSensor.SkeletonStream.Enable();
 
             newSensor.AllFramesReady += new EventHandler<AllFramesReadyEventArgs>(newSensor_AllFramesReady);
@@ -55,11 +61,16 @@ namespace YMCA_Detector
             }
         }
 
+
         void newSensor_AllFramesReady(object sender, AllFramesReadyEventArgs e)
         {
             //throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Stops a kinect sensor. Also the Audio Source.
+        /// </summary>
+        /// <param name="sensor">a valid kinect sensor referance</param>
         private void StopKinect(KinectSensor sensor)
         {
             if (sensor != null)
@@ -71,9 +82,19 @@ namespace YMCA_Detector
             }
         }
 
+        /// <summary>
+        /// Stoping the kinect sensor & various uninitialise
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             StopKinect(kinectSensorChooser1.Kinect);
+        }
+
+        private void kinectColorViewer1_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }
