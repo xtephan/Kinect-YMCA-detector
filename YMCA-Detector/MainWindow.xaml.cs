@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Kinect;
 
 namespace YMCA_Detector
 {
@@ -22,10 +23,58 @@ namespace YMCA_Detector
         public MainWindow()
         {
             InitializeComponent();
-
-            //dsads
-
-            //sss
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            kinectSensorChooser1.KinectSensorChanged += new DependencyPropertyChangedEventHandler(kinectSensorChooser1_KinectSensorChanged);
+        }
+
+        void kinectSensorChooser1_KinectSensorChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            KinectSensor oldSensor = (KinectSensor)e.OldValue;
+            StopKinect(oldSensor);
+
+            KinectSensor newSensor = (KinectSensor)e.NewValue;
+
+            if (newSensor == null)
+                return;
+
+            newSensor.ColorStream.Enable();
+            newSensor.SkeletonStream.Enable();
+
+            newSensor.AllFramesReady += new EventHandler<AllFramesReadyEventArgs>(newSensor_AllFramesReady);
+
+            try
+            {
+                newSensor.Start();
+            }
+            catch (System.IO.IOException)
+            {
+                kinectSensorChooser1.AppConflictOccurred();
+            }
+        }
+
+        void newSensor_AllFramesReady(object sender, AllFramesReadyEventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void StopKinect(KinectSensor sensor)
+        {
+            if (sensor != null)
+            {
+                sensor.Stop();
+
+                if (sensor.AudioSource != null)
+                    sensor.AudioSource.Stop();
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            StopKinect(kinectSensorChooser1.Kinect);
+        }
+
     }
 }

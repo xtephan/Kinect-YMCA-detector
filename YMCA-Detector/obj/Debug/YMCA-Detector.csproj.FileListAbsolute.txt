@@ -1,0 +1,15 @@
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\YMCA-Detector.exe
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\YMCA-Detector.pdb
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.dll
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\ResolveAssemblyReference.cache
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\MainWindow.baml
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\MainWindow.g.cs
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\App.g.cs
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\YMCA-Detector_MarkupCompile.cache
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\YMCA-Detector.g.resources
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\YMCA_Detector.Properties.Resources.resources
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\GenerateResource.read.1.tlog
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\GenerateResource.write.1.tlog
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\YMCA-Detector.exe
+c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\YMCA-Detector.pdb
+C:\Users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.pdb
