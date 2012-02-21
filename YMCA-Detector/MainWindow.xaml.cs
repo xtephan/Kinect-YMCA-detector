@@ -24,6 +24,8 @@ namespace YMCA_Detector
             InitializeComponent();
 
             //dsads
+
+            //sss
         }
     }
 }
