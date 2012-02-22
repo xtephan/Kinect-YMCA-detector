@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("stage.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ymca2.wav")]
 
 

@@ -5,8 +5,18 @@
     <Grid Height="574">
         <my:KinectSensorChooser HorizontalAlignment="Left" Margin="20,173,0,0" Name="kinectSensorChooser1" VerticalAlignment="Top" Width="312" Height="180" />
         <my:KinectColorViewer HorizontalAlignment="Left" Margin="12,281,0,0" Name="kinectColorViewer1" VerticalAlignment="Top" Height="240" Width="320" Loaded="kinectColorViewer1_Loaded" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" />
-        <my:KinectSkeletonViewer HorizontalAlignment="Left" Margin="12,12,0,0" Name="kinectSkeletonViewer1" VerticalAlignment="Top" Width="320" Height="240" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" />
-        <Image Height="509" HorizontalAlignment="Left" Margin="336,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="828" Source="/YMCA-Detector;component/stage.jpg" />
-        <Label Content="Give me an Y!" Height="42" HorizontalAlignment="Left" Margin="612,12,0,0" Name="label1" VerticalAlignment="Top" Width="414" FontSize="25" FontWeight="Bold" Foreground="White" />
+        <Canvas Name="MainCanvas" Height="509"  Width="828" Margin="339,5,10,59">
+            <Image Height="509" HorizontalAlignment="Left" Margin="336,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="828" Source="/YMCA-Detector;component/stage.jpg" Canvas.Left="-337" Canvas.Top="-15" />
+            <Image Name="smileyHead"  Canvas.Left="377" Canvas.Top="57" Width="60" Height="60" Source="/YMCA-Detector;component/bigsmiley.png" />
+
+            <Ellipse Canvas.Left="537" Canvas.Top="256" Height="30" Name="rightEllipse" Stroke="Black" Width="30" Fill="#FF864DFF" />
+            <Ellipse Canvas.Left="180" Canvas.Top="270" Fill="#FF864DFF" Height="30" Name="leftEllipse" Stroke="Black" Width="30" />
+            <Ellipse Canvas.Left="180" Canvas.Top="164" Fill="#FF00ACFF" Height="30" Name="elbowleftEllipse" Stroke="Black" Width="30" />
+            <Ellipse Canvas.Left="537" Canvas.Top="164" Fill="#FF00ACFF" Height="30" Name="elbowrightEllipse" Stroke="Black" Width="30" />
+            <Ellipse Canvas.Left="180" Canvas.Top="87" Fill="#FF2915B9" Height="30" Name="sholderleftEllipse" Stroke="Black" Width="30" />
+            <Ellipse Canvas.Left="537" Canvas.Top="87" Fill="#FF2915B9" Height="30" Name="sholderrightEllipse" Stroke="Black" Width="30" />
+            <TextBlock Text="Give me an Y!" Height="42" Name="debugg" Width="414" FontSize="25" FontWeight="Bold" Foreground="White" TextAlignment="Center" Canvas.Left="180" Canvas.Top="6" />
+        </Canvas>
+        <my:KinectSkeletonViewer Name="kinectSkeletonViewer1" Width="320" Height="240" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" Margin="12,18,845,316" />
     </Grid>
 </Window>
