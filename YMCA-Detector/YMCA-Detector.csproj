@@ -146,9 +146,9 @@
     <Resource Include="bigsmiley.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ymca2.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <None Include="ymca2.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

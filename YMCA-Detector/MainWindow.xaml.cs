@@ -62,7 +62,8 @@ namespace YMCA_Detector
         private void InitVars()
         {
             assembly = Assembly.GetExecutingAssembly();
-            simpleSound = new SoundPlayer(assembly.GetManifestResourceStream("ymca2.wav"));
+            //simpleSound = new SoundPlayer(assembly.GetManifestResourceStream("ymca2.wav"));
+            simpleSound = new SoundPlayer(@"ymca2.wav");
         }
 
         //plays YMCA :-)
@@ -150,7 +151,7 @@ namespace YMCA_Detector
                 orderIndex = 1;
             }
 
-
+            
             //detect M
             if (complete[1] == 0 && detectedM() && order[orderIndex].CompareTo('m') == 0)
             {
@@ -159,7 +160,7 @@ namespace YMCA_Detector
                 orderIndex = 2;
             }
 
-
+            
             //detect C
             if (complete[2] == 0 && detectedC() && order[orderIndex].CompareTo('c') == 0)
             {
@@ -168,7 +169,7 @@ namespace YMCA_Detector
                 orderIndex = 3;
             }
 
-
+           
             //detect A
             if (complete[3] == 0 && detectedA() && order[orderIndex].CompareTo('a') == 0)
             {
@@ -185,9 +186,11 @@ namespace YMCA_Detector
             }
 
             if (shouldPlay() && !activeplayer)
+            {
                 PlayMusic();
                 addDebug("Take a bro position in order to restart!");
-
+            }
+            
         }
 
         /// <summary>
