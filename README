@@ -1,0 +1,17 @@
+Kinect YMCA Detector
+
+
+
+A demo(of a previous version) of how it works can be found here: http://www.youtube.com/watch?v=RrzDxmASHfg
+
+
+May require(I haven't tried without them):
+
+* Visual Studio 2010
+* .Net 4 Framework
+* Microsoft Kinect SDK 1
+* 
+Kinect for Xbox360 or Kinect for Windows
+
+
+Have fun:-)

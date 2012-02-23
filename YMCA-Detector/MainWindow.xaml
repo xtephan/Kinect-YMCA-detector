@@ -7,7 +7,7 @@
         <my:KinectColorViewer HorizontalAlignment="Left" Margin="12,281,0,0" Name="kinectColorViewer1" VerticalAlignment="Top" Height="240" Width="320" Loaded="kinectColorViewer1_Loaded" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" />
         <Canvas Name="MainCanvas" Height="509"  Width="828" Margin="339,5,10,59">
             <Image Height="509" HorizontalAlignment="Left" Margin="336,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="828" Source="/YMCA-Detector;component/stage.jpg" Canvas.Left="-337" Canvas.Top="-15" />
-            <Image Name="smileyHead"  Canvas.Left="377" Canvas.Top="57" Width="60" Height="60" Source="/YMCA-Detector;component/bigsmiley.png" />
+            <Image Name="smileyHead"  Canvas.Left="377" Canvas.Top="57" Width="98" Height="105" Source="/YMCA-Detector;component/face2.png" />
 
             <Ellipse Canvas.Left="537" Canvas.Top="256" Height="30" Name="rightEllipse" Stroke="Black" Width="30" Fill="#FF864DFF" />
             <Ellipse Canvas.Left="180" Canvas.Top="270" Fill="#FF864DFF" Height="30" Name="leftEllipse" Stroke="Black" Width="30" />

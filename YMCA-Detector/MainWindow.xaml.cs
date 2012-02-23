@@ -329,9 +329,17 @@ namespace YMCA_Detector
         /// <param name="jp"></param>
         private void SetElementPosition(FrameworkElement element, JPoint jp)
         {
-            //TODO: try microsoft way with /2
+            if (element.Equals(smileyHead))
+            {
+                Canvas.SetTop(element, CanvasWidth - jp.Y + element.Height / 2 - 60);
+            }
+            else
+            {
+                Canvas.SetTop(element, CanvasWidth - jp.Y + element.Height / 2);
+            }
+
             Canvas.SetLeft(element, jp.X - element.Width/2);
-            Canvas.SetTop(element, CanvasWidth - jp.Y - element.Height/2);
+            
         }
 
 
@@ -354,8 +362,7 @@ namespace YMCA_Detector
         private JPoint JointLocation(Joint joint)
         {
             JPoint tmp;
-            //TODO: try without .9f
-            var scaledJoint = joint.ScaleTo(CanvasWidth, CanvasHeight, .9f, .9f);
+            var scaledJoint = joint.ScaleTo(CanvasWidth, CanvasHeight /*, .3f, .3f*/);
 
             tmp.X = scaledJoint.Position.X;
             tmp.Y = CanvasWidth - scaledJoint.Position.Y;
