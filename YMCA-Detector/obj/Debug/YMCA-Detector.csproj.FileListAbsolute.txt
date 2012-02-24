@@ -15,9 +15,9 @@ c:\users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detect
 C:\Users\xtephan\documents\visual studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.pdb
 C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\Coding4Fun.Kinect.Wpf.dll
 C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\Coding4Fun.Kinect.Wpf.pdb
-C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\ymca2.wav
 C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\face1.png
 C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\YMCA-Detector.exe.manifest
 C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\YMCA-Detector.application
 C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\YMCA-Detector.exe.manifest
 C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\obj\Debug\YMCA-Detector.application
+C:\Users\xtephan\Documents\Visual Studio 2010\Projects\YMCA-Detector\YMCA-Detector\bin\Debug\ymca2.wav

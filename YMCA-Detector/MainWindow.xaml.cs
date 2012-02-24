@@ -50,7 +50,8 @@ namespace YMCA_Detector
         const int CanvasWidth = 828;
         const int CanvasHeight = 509;
 
-        const int TOLERANCE = 25;
+        public int TOLERANCE = 25;
+        public string XX {get; set;}
         #endregion
 
         public MainWindow()
@@ -62,8 +63,8 @@ namespace YMCA_Detector
         private void InitVars()
         {
             assembly = Assembly.GetExecutingAssembly();
-            //simpleSound = new SoundPlayer(assembly.GetManifestResourceStream("ymca2.wav"));
-            simpleSound = new SoundPlayer(@"ymca2.wav");
+            simpleSound = new SoundPlayer(assembly.GetManifestResourceStream("YMCA_Detector.ymca2.wav"));
+            //simpleSound = new SoundPlayer(@"ymca2.wav");
         }
 
         //plays YMCA :-)
@@ -85,7 +86,9 @@ namespace YMCA_Detector
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            
             kinectSensorChooser1.KinectSensorChanged += new DependencyPropertyChangedEventHandler(kinectSensorChooser1_KinectSensorChanged);
+            //PlayMusic();
         }
 
         /// <summary>

@@ -17,6 +17,6 @@
             <Ellipse Canvas.Left="537" Canvas.Top="87" Fill="#FF2915B9" Height="30" Name="sholderrightEllipse" Stroke="Black" Width="30" />
             <TextBlock Text="Give me an Y!" Height="42" Name="debugg" Width="414" FontSize="25" FontWeight="Bold" Foreground="White" TextAlignment="Center" Canvas.Left="180" Canvas.Top="6" />
         </Canvas>
-        <my:KinectSkeletonViewer Name="kinectSkeletonViewer1" Width="320" Height="240" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" Margin="12,18,845,316" />
+        <my:KinectSkeletonViewer Name="kinectSkeletonViewer1" Width="320" Height="240" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" Margin="12,12,845,322" />
     </Grid>
 </Window>
