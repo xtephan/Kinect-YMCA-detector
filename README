@@ -1,17 +1,32 @@
 Kinect YMCA Detector
+----
+
+A game that uses Microsoft Kinect to recognise the YMCA dance.
+
+Requirements
+---
+
+####Software:####
+- .Net 4 Framework
+- Microsoft Kinect SDK beta 2
+- DirectX
+- DirectX SDK
 
 
+####Hardware:####
+- Kinect 360 or Kinect for Windows v1
 
-A demo(of a previous version) of how it works can be found here: http://www.youtube.com/watch?v=RrzDxmASHfg
+Notes
+---
 
+This code has not been updates since 2012 and it is less likely that it will ever be. 
 
-May require(I haven't tried without them):
+The code was made for a school project as a proff of concept.
 
-* Visual Studio 2010
-* .Net 4 Framework
-* Microsoft Kinect SDK 1
-* 
-Kinect for Xbox360 or Kinect for Windows
+License
+---
+Copyright Stefan Fodor @ 2012
 
+This program is free under the terms of GNU GPL licence.
 
-Have fun:-)
+Feel free to copy, modify and redistribute.
